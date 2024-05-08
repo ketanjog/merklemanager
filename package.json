@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@openzeppelin/merkle-tree": "^1.0.6",
     "@vercel/kv": "^1.0.1",
     "next": "14.2.3",
     "react": "^18",
