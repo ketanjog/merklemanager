@@ -1,4 +1,9 @@
 export const dynamic = 'force-dynamic' // defaults to auto
+import { kv } from '@vercel/kv';
+import { NextResponse } from 'next/server';
+
 export async function GET(request: Request) {
-  return new Response('Hello, world!')
+  const hello = await kv.get('boo')
+  return NextResponse.json(hello);
+  //return new Response('Hello, world!')
 }
